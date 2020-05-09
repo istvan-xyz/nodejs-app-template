@@ -1,0 +1,104 @@
+{
+    "name": "feeder",
+    "version": "0.0.1",
+    "description": "Feed processor",
+    "main": "./src/index.ts",
+    "scripts": {
+        "start": "babel-node --extensions \".ts,.js\" ./src/main.ts",
+        "test": "echo 'test'",
+        "lint": "eslint --ext ts,tsx --quiet ./src"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@istvan.xyz:istvan/feeder.git"
+    },
+    "author": "István Antal <istvan@antal.xyz>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.6",
+        "@babel/node": "^7.8.7",
+        "@babel/preset-env": "^7.9.6",
+        "@babel/preset-typescript": "^7.9.0"
+    },
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "targets": {
+                        "node": "current"
+                    }
+                }
+            ],
+            "@babel/preset-typescript"
+        ]
+    },
+    "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "parserOptions": {
+            "project": "./tsconfig.json"
+        },
+        "extends": [
+            "plugin:@typescript-eslint/recommended"
+        ],
+        "rules": {
+            "arrow-parens": [
+                "error",
+                "as-needed"
+            ],
+            "@typescript-eslint/no-empty-function": 0,
+            "@typescript-eslint/explicit-function-return-type": 0,
+            "@typescript-eslint/array-type": "error",
+            "@typescript-eslint/class-name-casing": "error",
+            "@typescript-eslint/consistent-type-assertions": "error",
+            "@typescript-eslint/no-explicit-any": [
+                "warn"
+            ],
+            "@typescript-eslint/no-inferrable-types": "error",
+            "@typescript-eslint/no-misused-new": "error",
+            "@typescript-eslint/no-namespace": "error",
+            "@typescript-eslint/no-this-alias": [
+                "error"
+            ],
+            "@typescript-eslint/no-unused-vars": [
+                "warn"
+            ],
+            "@typescript-eslint/no-var-requires": "off",
+            "@typescript-eslint/prefer-namespace-keyword": "error",
+            "@typescript-eslint/triple-slash-reference": "error",
+            "@typescript-eslint/type-annotation-spacing": "error",
+            "@typescript-eslint/await-thenable": "error",
+            "@typescript-eslint/consistent-type-definitions": "error",
+            "@typescript-eslint/no-floating-promises": "error",
+            "@typescript-eslint/no-parameter-properties": "error",
+            "@typescript-eslint/no-require-imports": "off",
+            "@typescript-eslint/no-unnecessary-qualifier": "error",
+            "@typescript-eslint/no-unnecessary-type-arguments": "error",
+            "@typescript-eslint/prefer-for-of": "error",
+            "@typescript-eslint/promise-function-async": "error",
+            "@typescript-eslint/quotes": [
+                "error",
+                "single",
+                {
+                    "avoidEscape": true
+                }
+            ],
+            "@typescript-eslint/restrict-plus-operands": "error",
+            "@typescript-eslint/semi": [
+                "error",
+                "always"
+            ],
+            "@typescript-eslint/strict-boolean-expressions": "off",
+            "@typescript-eslint/unbound-method": "off",
+            "@typescript-eslint/unified-signatures": "error"
+        }
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.31.0",
+        "@typescript-eslint/parser": "^2.31.0",
+        "eslint": "^7.0.0",
+        "typescript": "^3.8.3"
+    }
+}

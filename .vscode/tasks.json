@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "start",
+            "problemMatcher": ["$eslint-stylish"],
+            "label": "Run",
+            "detail": "Run the application"
+        },
+        {
+            "type": "shell",
+            "command": "npm install",
+            "problemMatcher": [],
+            "label": "NPM Install",
+            "detail": "Install dependencies"
+        }
+    ]
+}
